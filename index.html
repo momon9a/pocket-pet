@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7c948">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="口袋桌宠">
+    <title>口袋桌宠</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+    <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="status-bar" aria-label="宠物状态">
+        <div>
+          <p class="eyebrow">Pocket Pet</p>
+          <h1 id="petNameTitle">Momo</h1>
+        </div>
+        <button class="icon-button" id="renameButton" type="button" aria-label="改名" title="改名">
+          ✎
+        </button>
+      </section>
+
+      <section class="meters" aria-label="数值">
+        <article class="meter">
+          <span>饱腹</span>
+          <strong id="hungerText">80</strong>
+          <div class="meter-track"><i id="hungerBar"></i></div>
+        </article>
+        <article class="meter">
+          <span>心情</span>
+          <strong id="moodText">75</strong>
+          <div class="meter-track"><i id="moodBar"></i></div>
+        </article>
+      </section>
+
+      <section class="stage" aria-label="桌宠区域">
+        <div class="speech" id="speechBubble">今天也一起待一会儿吧。</div>
+        <button class="pet" id="petButton" type="button" aria-label="摸摸桌宠">
+          <span class="ear ear-left"></span>
+          <span class="ear ear-right"></span>
+          <span class="face">
+            <span class="eye eye-left"></span>
+            <span class="eye eye-right"></span>
+            <span class="mouth"></span>
+            <span class="cheek cheek-left"></span>
+            <span class="cheek cheek-right"></span>
+          </span>
+          <span class="body"></span>
+          <span class="paw paw-left"></span>
+          <span class="paw paw-right"></span>
+        </button>
+      </section>
+
+      <section class="actions" aria-label="互动">
+        <button class="action-button" id="feedButton" type="button">
+          <span>🍙</span>
+          喂食
+        </button>
+        <button class="action-button" id="playButton" type="button">
+          <span>✨</span>
+          玩耍
+        </button>
+        <button class="action-button" id="napButton" type="button">
+          <span>☾</span>
+          小睡
+        </button>
+      </section>
+
+      <section class="install-card" id="installCard" hidden>
+        <p>在 iPhone Safari 里点分享按钮，然后选择“添加到主屏幕”。</p>
+        <button id="dismissInstall" type="button">知道了</button>
+      </section>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
