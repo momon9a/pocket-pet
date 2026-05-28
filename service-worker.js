@@ -1,4 +1,4 @@
-const CACHE_NAME = "pocket-pet-v1";
+const CACHE_NAME = "pocket-pet-v5";
 const ASSETS = [
   "./",
   "./index.html",
@@ -8,7 +8,11 @@ const ASSETS = [
   "./icons/icon.svg",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
-  "./icons/apple-touch-icon.png"
+  "./icons/apple-touch-icon.png",
+  "./assets/pet-idle.png",
+  "./assets/pet-feed.png",
+  "./assets/pet-play.png",
+  "./assets/pet-rest.png"
 ];
 
 self.addEventListener("install", (event) => {
