@@ -30,8 +30,6 @@ const petArt = document.querySelector("#petArt");
 const feedButton = document.querySelector("#feedButton");
 const playButton = document.querySelector("#playButton");
 const restButton = document.querySelector("#restButton");
-const installCard = document.querySelector("#installCard");
-const dismissInstall = document.querySelector("#dismissInstall");
 
 function loadState() {
   const saved = localStorage.getItem(STORAGE_KEY);
@@ -150,13 +148,6 @@ function renamePet() {
   speak(`${state.name} 记住自己的名字了。`);
 }
 
-function showInstallHint() {
-  const isStandalone = window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone;
-  const dismissed = localStorage.getItem("install-hint-dismissed") === "yes";
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  installCard.hidden = !isIOS || isStandalone || dismissed;
-}
-
 function registerServiceWorker() {
   if (!("serviceWorker" in navigator)) return;
   window.addEventListener("load", () => {
@@ -171,10 +162,6 @@ playButton.addEventListener("click", () => act("play"));
 restButton.addEventListener("click", () => act("rest"));
 petButton.addEventListener("click", () => act("pet"));
 renameButton.addEventListener("click", renamePet);
-dismissInstall.addEventListener("click", () => {
-  localStorage.setItem("install-hint-dismissed", "yes");
-  installCard.hidden = true;
-});
 
 window.setInterval(() => {
   state.hunger = clamp(state.hunger - 1);
@@ -184,5 +171,4 @@ window.setInterval(() => {
 }, 90_000);
 
 render();
-showInstallHint();
 registerServiceWorker();
