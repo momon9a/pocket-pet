@@ -1,7 +1,7 @@
 {
   "name": "口袋桌宠",
   "short_name": "桌宠",
-  "description": "一个本地运行、可添加到主屏幕的离线桌宠 PWA。",
+  "description": "一个可添加到主屏幕的离线桌宠 PWA。",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
