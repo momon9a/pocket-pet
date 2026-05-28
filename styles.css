@@ -171,6 +171,36 @@ h1 {
   transform: scale(0.97);
 }
 
+.pet-art {
+  position: absolute;
+  left: 50%;
+  bottom: -4%;
+  z-index: 5;
+  display: none;
+  width: 100%;
+  max-width: none;
+  transform: translateX(-50%);
+  border-radius: 8px;
+  pointer-events: none;
+}
+
+.pet.image-mode {
+  width: clamp(210px, 68vw, 300px);
+  aspect-ratio: 2 / 3;
+  margin-top: 18px;
+}
+
+.pet.image-mode .pet-art {
+  display: block;
+}
+
+.pet.image-mode .face,
+.pet.image-mode .body,
+.pet.image-mode .ear,
+.pet.image-mode .paw {
+  display: none;
+}
+
 .face,
 .body,
 .ear,
