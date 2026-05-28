@@ -346,35 +346,6 @@ h1 {
   font-size: 21px;
 }
 
-.install-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 12px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(34, 33, 31, 0.88);
-  color: #fff;
-}
-
-.install-card p {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.35;
-}
-
-.install-card button {
-  flex: 0 0 auto;
-  min-width: 76px;
-  height: 36px;
-  border: 0;
-  border-radius: 8px;
-  background: var(--gold);
-  color: #211b0c;
-  font-weight: 800;
-}
-
 @keyframes stroll {
   0%,
   100% {
